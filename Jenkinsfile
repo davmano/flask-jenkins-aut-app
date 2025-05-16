@@ -30,11 +30,11 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'docker tag flask-app:latest <your-docker-hub-username>/flask-app:latest'
+                sh 'docker tag flask-app:latest davmano/flask-app:latest'
                 withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'DOCKER_HUB_PASSWORD', usernameVariable: 'DOCKER_HUB_USERNAME')]) {
                     sh '''
                         docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
-                        docker push <your-docker-hub-username>/flask-app:latest
+                        docker push davmano/flask-app:latest
                     '''
                 }
             }
