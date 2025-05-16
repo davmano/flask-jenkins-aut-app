@@ -9,6 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh 'docker rm -f flask-app-test || true'
                 sh 'docker run -d --name flask-app-test -p 5000:5000 flask-app'
                 sh 'sleep 30'
                 sh 'curl http://localhost:5000'
