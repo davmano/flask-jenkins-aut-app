@@ -131,6 +131,9 @@ sudo chown -R jenkins:jenkins /var/lib/jenkins/.kube
 **David Mano**
 DevOps Engineer | Cloud Enthusiast | CI/CD Practitioner
 
+<!-- Triggered from GitHub GUI -->
+
+
 ---
 
 ## 📂 License
