@@ -120,7 +120,9 @@ sudo chown -R jenkins:jenkins /var/lib/jenkins/.kube
 
 ## 📸 Screenshot
 
-*(Optional: Add a screenshot of Jenkins pipeline in action or Kubernetes dashboard)*
+![pipeline-screenshot](https://github.com/user-attachments/assets/d29e13b9-f0f0-4547-a68d-f01873eb57a3)
+
+![k8s-screenshot](https://github.com/user-attachments/assets/9b69ca96-562d-4f62-b257-edcabf7e7a3c)
 
 ---
 
