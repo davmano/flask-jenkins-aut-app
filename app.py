@@ -1,6 +1,8 @@
 from flask import Flask, render_template # type: ignore
+from prometheus_flask_exporter import PrometheusMetrics # type: ignore
 
 app = Flask(__name__)
+metrics = PrometheusMetrics(app, group_by='endpoint')
 
 @app.route("/")
 def index():
