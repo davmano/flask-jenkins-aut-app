@@ -47,7 +47,7 @@ The pipeline performs the following automated steps:
 docker build -t flask-app .
 ```
 
-* Builds the app using a Dockerfile based on `python:3.9-slim`.
+* Builds the app using a Dockerfile based on `python:3."latest-slim`.
 
 ### 3. Run and Test Container
 
