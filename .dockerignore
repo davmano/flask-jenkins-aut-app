@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache
+*.coverage
+.cache/
+
+# Venvs
+.venv/
+venv/
+ENV/
+
+# Git & IDE
+.git/
+.gitignore
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Docker
+Dockerfile
+

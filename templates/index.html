@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask App</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>KubeNote</title>
 </head>
 <body>
-    <h1>Welcome to my Flask App!</h1>
+  <h1>📓 KubeNote</h1>
+  <h2>Notes:</h2>
+  <ul>
+    {% for note in notes %}
+      <li>{{ note }}</li>
+    {% endfor %}
+  </ul>
 </body>
 </html>

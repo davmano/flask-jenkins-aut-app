@@ -1,0 +1,12 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  receiver: "default"
+
+receivers:
+  - name: "default"
+    # Example: send alerts to console log
+    # (you can later add Slack, Email, PagerDuty etc.)
+    webhook_configs:
+      - url: "http://localhost:5001/"   # Replace with a real webhook later
