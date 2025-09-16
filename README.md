@@ -90,7 +90,28 @@ sudo mkdir -p /var/lib/jenkins/.kube
 sudo cp ~/.kube/config /var/lib/jenkins/.kube/config
 sudo chown -R jenkins:jenkins /var/lib/jenkins/.kube
 ```
+Start Jenkins normally (your command is fine):
 
+```
+docker run -d \
+  --name jenkins \
+  -p 8080:8080 -p 50000:50000 \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v jenkins_home:/var/jenkins_home \
+  jenkins/jenkins:lts
+```
+
+   Then exec into the container as root to install Docker CLI:
+```
+docker exec -it --user root jenkins bash
+```
+ Inside the container run:
+```
+apt-get update
+apt-get install -y docker.io
+exit
+
+```
 ---
 
 ## 🔐 Credentials
